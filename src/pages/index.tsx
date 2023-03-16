@@ -1,12 +1,13 @@
-import * as React from "react";
 import Head from "next/head";
-import { Black_And_White_Picture, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from "nuka-carousel";
 import Image from "next/image";
 import DatePickerComponent from "@/components/datepiker";
 import Header from "./header";
 import Footer from "./footer";
+import Tourlist from "@/components/tours";
+import * as React from "react";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 
@@ -61,41 +62,26 @@ export default function Home() {
               </div>
               <div className="col-md-5 col-xs-12 pull-left">
                 <div className="reservation-form-shadow">
+                  <Stack spacing={2} direction="row">
+                    <Button
+                      style={{ color: "black", fontSize: "1em" }}
+                      variant="outlined"
+                    >
+                      Tours
+                    </Button>
+                  </Stack>
                   <form
+                    style={{ paddingTop: "0em" }}
                     action="#"
                     method="post"
                     name="car-select-form"
                     id="car-select-form"
                   >
-                    {/* <div
-                      className="alert alert-danger hidden"
-                      id="car-select-form-msg"
-                    >
-                      <button
-                        type="button"
-                        className="close"
-                        data-dismiss="alert"
-                        aria-hidden="true"
-                      >
-                        ×
-                      </button>
-                      <strong>Note:</strong> All fields required!
-                    </div> */}
-                    <Stack spacing={2} direction="row">
-                      <Button
-                        style={{color: "black",
-											fontSize:"1.5em",marginTop: "-1.3em",
-											marginLeft: "-1.4em"}}
-                        variant="outlined"
-                      >
-                        Tours
-                      </Button>
-                    </Stack>
-                    {/* <div className="subtitle">
-                      Please select pickup and drop off date in the form below
-                    </div> */}
+                    <h3 style={{ textAlign: "center" }}>List of places</h3>
                     {/* <!-- Pick-up date/time start --> */}
                     {/* <DatePickerComponent /> */}
+
+                    <Tourlist />
 
                     <input
                       type="submit"
