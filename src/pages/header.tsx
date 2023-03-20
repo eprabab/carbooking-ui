@@ -1,6 +1,10 @@
 import Link from 'next/link';
+import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Header() {
+	const [showNavbar, setShowNavbar] = useState(false);
+
 	return (
 		<header
 			data-spy='affix'
@@ -13,11 +17,13 @@ export default function Header() {
 					{/* <!-- Logo start --> */}
 					<div className='brand'>
 						<h1>
-							<a className='scroll-to' href='#top'>
-								<img
+							<a className='scroll-to'>
+								<Image
 									className='img-responsive'
 									src='./img/logo.gif'
 									alt='Car|Rental'
+									width='300'
+									height='57'
 								/>
 							</a>
 						</h1>
@@ -43,8 +49,7 @@ export default function Header() {
 								<button
 									type='button'
 									className='navbar-toggle'
-									data-toggle='collapse'
-									data-target='#bs-example-navbar-collapse-1'
+									onClick={() => setShowNavbar(!showNavbar)}
 								>
 									<span className='sr-only'>
 										Toggle navigation
@@ -57,19 +62,21 @@ export default function Header() {
 									className='navbar-brand scroll-to'
 									href='#top'
 								>
-									<img
+									<Image
 										className='img-responsive'
 										src='img/logo.gif'
 										alt='Car|Rental'
+										width='300'
+										height='57'
 									/>
 								</a>
 							</div>
 							{/* <!-- Collect the nav links, for toggling --> */}
 							<div
-								className='collapse navbar-collapse'
-								id='bs-example-navbar-collapse-1'
+								className={`navbar-collapse ${
+									showNavbar ? 'collapse in' : 'collapse'
+								} `}
 							>
-								{/* <!-- Nav-Links start --> */}
 								<ul className='nav navbar-nav navbar-right'>
 									<li className='active'>
 										<Link href='/' className='scroll-to'>

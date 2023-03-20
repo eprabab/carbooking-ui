@@ -8,7 +8,12 @@ import '@/styles/animate.css';
 />;
 import '@/styles/font-awesome.min.css';
 import type { AppProps } from 'next/app';
+import { RezervationProvider } from '@/components/context';
 
 export default function App({ Component, pageProps }: AppProps) {
-	return <Component {...pageProps} />;
+	return (
+		<RezervationProvider>
+			<Component {...pageProps} />
+		</RezervationProvider>
+	);
 }

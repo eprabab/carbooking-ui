@@ -1,0 +1,122 @@
+import Fetcher from './fetcher';
+import useSWR from 'swr';
+import { useEffect, useState } from 'react';
+import appConfig from '../appConfig.json';
+import Select from 'react-select';
+
+interface IRentalLocation {
+	name: string;
+}
+interface ISecondDDLocation {
+	name: string;
+}
+
+const RentalLocations = () => {
+	const [selOption, setSelOption] = useState<string>('');
+	const [secondDD, setSsecondDD] = useState<string[]>([]);
+	const [secondDDSelected, setSsecondDDSelected] = useState<string>('');
+
+	useEffect(() => {
+		if (selOption && selOption.length) {
+			setSsecondDD([]);
+			callSecondEndpoint();
+		}
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [selOption]);
+
+	const handleChange = (option: string) => {
+		setSsecondDD([]);
+		if (option && option.length) {
+			setSelOption(option);
+		}
+	};
+	const handleSecondChange = (option: string) => {
+		//console.log('option:', option);
+		if (option && option.length) {
+			setSsecondDDSelected(option);
+		}
+	};
+
+	const postData = () => {
+		console.log(selOption, secondDDSelected);
+	};
+
+	const callSecondEndpoint = () => {
+		if (selOption && selOption.length) {
+			fetch(`${appConfig.baseUrl}rent/${selOption}`)
+				.then((res) => res.json())
+				.then(
+					(result) => {
+						setSsecondDD(mapData(result));
+					},
+
+					(error) => {
+						console.log(error);
+					}
+				);
+		}
+	};
+
+	const mapData = (data: any) => {
+		let newData: { value: string; label: string }[] = [];
+		const localData = [...data];
+
+		if (localData && localData.length) {
+			localData.map((item: string) => {
+				newData.push({ value: item, label: item });
+			});
+			return newData;
+		} else {
+			return localData;
+		}
+	};
+
+	//First dd data pull
+	const { data, error } = useSWR('/rent', Fetcher);
+
+	if (error) return <div>Failed to load</div>;
+	if (!data) return <div>Loading...</div>;
+	const newData: IRentalLocation[] = data;
+	const options = mapData(newData);
+
+	return (
+		<>
+			<Select
+				name='select-state'
+				menuPortalTarget={document.body}
+				styles={{ menuPortal: (base) => ({ ...base, zIndex: 9999 }) }}
+				options={options}
+				defaultValue={{ label: 'From', value: '' }}
+				onChange={(e) => e && handleChange(e.label)}
+			/>
+			<div className='gap'></div>
+			{secondDD && secondDD.length > 0 ? (
+				<Select
+					className='select-attraction'
+					name='select-attraction'
+					options={secondDD}
+					onChange={(e) => e && handleSecondChange(e.label)}
+				/>
+			) : (
+				<Select
+					className='select-attraction'
+					name='select-attraction'
+					isDisabled={true}
+					defaultValue={{ label: 'From', value: '' }}
+				/>
+			)}
+
+			<input
+				type='submit'
+				className='submit'
+				name='submit'
+				value='continue car reservation'
+				id='checkoutModalLabel'
+				onClick={postData}
+			/>
+		</>
+	);
+};
+
+export default RentalLocations;

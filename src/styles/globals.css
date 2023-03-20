@@ -268,32 +268,31 @@ header.large .brand {
 		7px 0 15px -4px rgba(0, 0, 0, 0.3), -7px 0 15px -4px rgba(0, 0, 0, 0.3);
 	z-index: -1;
 }
-#teaser form {
+#teaser #car-select-form {
 	padding: 34px;
 }
-#teaser form .alert {
+#teaser #car-select-form .alert {
 	margin-top: -20px;
 	padding: 10px 15px;
 }
-#teaser form ::-webkit-input-placeholder {
+#teaser #car-select-form ::-webkit-input-placeholder {
 	color: #c61334 !important;
 }
-#teaser form :-moz-placeholder {
+#teaser #car-select-form :-moz-placeholder {
 	color: #c61334 !important;
 }
-#teaser form ::-moz-placeholder {
+#teaser #car-select-form ::-moz-placeholder {
 	color: #c61334 !important;
 }
-#teaser form :-ms-input-placeholder {
+#teaser #car-select-form :-ms-input-placeholder {
 	color: #c61334 !important;
 }
-#teaser form .styled-select-car {
+#teaser #car-select-form .styled-select-car {
 	border: 2px solid #efe9e9;
 	height: 55px;
 	position: relative;
-	margin-bottom: 23px;
 }
-#teaser form .styled-select-car:after {
+#teaser #car-select-form .styled-select-car:after {
 	content: '';
 	background: #ffffff url('/img/dropdown-icon.png') no-repeat 5px 23px;
 	right: 0px;
@@ -303,10 +302,9 @@ header.large .brand {
 	position: absolute;
 	pointer-events: none;
 }
-#teaser form .styled-select-car select {
+#teaser #car-select-form .styled-select-car select {
 	border: none;
-	font-size: 24px;
-	font-weight: bold;
+	font-size: 20px;
 	width: 100%;
 	background-image: none;
 	background: #fff;
@@ -315,21 +313,21 @@ header.large .brand {
 	height: 51px;
 	outline: none;
 }
-#teaser form .location {
+#teaser #car-select-form .location {
 	margin-bottom: 27px;
 }
-#teaser form .datetime {
+#teaser #car-select-form .datetime {
 	margin-bottom: 11px;
 }
-#teaser form .form-control {
+#teaser #car-select-form .form-control {
 	height: 43px;
 	border: 2px solid #efe9e9;
 	box-shadow: none;
 }
-#teaser form .input-group {
+#teaser #car-select-form .input-group {
 	width: 100%;
 }
-#teaser form .input-group input {
+#teaser #car-select-form .input-group input {
 	border-radius: 0;
 	color: #c61334;
 	font-size: 16px;
@@ -339,7 +337,7 @@ header.large .brand {
 	-webkit-appearance: none;
 	z-index: 1;
 }
-#teaser form .input-group-addon {
+#teaser #car-select-form .input-group-addon {
 	border-radius: 0;
 	border: none;
 	background-color: #efe9e9;
@@ -349,31 +347,31 @@ header.large .brand {
 	width: 110px;
 	text-align: left;
 }
-#teaser form .input-group-addon .glyphicon {
+#teaser #car-select-form .input-group-addon .glyphicon {
 	font-size: 17px;
 	margin: 0 2px 0 -2px;
 }
-#teaser form .different-drop-off {
+#teaser #car-select-form .different-drop-off {
 	color: #716d6e;
 	font-weight: bold;
 	margin: 10px 0;
 	display: block;
 }
-#teaser form .date {
+#teaser #car-select-form .date {
 	width: 240px;
 }
-#teaser form .time {
+#teaser #car-select-form .time {
 	width: 140px;
 }
-#teaser form .pixelfix {
+#teaser #car-select-form .pixelfix {
 	border-top: 1px solid #fff;
 }
-#teaser form .styled-select-time {
+#teaser #car-select-form .styled-select-time {
 	border: 2px solid #efe9e9;
 	height: 43px;
 	position: relative;
 }
-#teaser form .styled-select-time:after {
+#teaser #car-select-form .styled-select-time:after {
 	content: '';
 	background: #ffffff url('/img/dropdown-icon.png') no-repeat 5px 18px;
 	right: 0px;
@@ -383,7 +381,7 @@ header.large .brand {
 	position: absolute;
 	pointer-events: none;
 }
-#teaser form .styled-select-time select {
+#teaser #car-select-form .styled-select-time select {
 	border: none;
 	font-size: 16px;
 	width: 100%;
@@ -394,7 +392,7 @@ header.large .brand {
 	height: 39px;
 	color: #c61334;
 }
-#teaser form .submit {
+#teaser #car-select-form .submit {
 	width: 100%;
 	background-color: #c61334;
 	color: #fff;
@@ -409,7 +407,7 @@ header.large .brand {
 	margin-top: 30px;
 	transition: 0.2s;
 }
-#teaser form .submit:hover {
+#teaser #car-select-form .submit:hover {
 	background-color: #716d6e;
 }
 #teaser .title {
@@ -662,7 +660,7 @@ header.large .brand {
 	text-transform: uppercase;
 	margin-bottom: 6px;
 }
-.comment-section .comment-respond form input {
+.comment-section .comment-respond #car-select-form input {
 	background-color: #dbdbdb;
 	height: 45px;
 	border-radius: 0;
@@ -672,7 +670,7 @@ header.large .brand {
 	font-size: 18px;
 	margin-bottom: 13px;
 }
-.comment-section .comment-respond form textarea {
+.comment-section .comment-respond #car-select-form textarea {
 	background-color: #dbdbdb;
 	border-radius: 0;
 	border: none;
@@ -680,19 +678,19 @@ header.large .brand {
 	font-size: 18px;
 	margin-bottom: 20px;
 }
-.comment-section .comment-respond form ::-webkit-input-placeholder {
+.comment-section .comment-respond #car-select-form ::-webkit-input-placeholder {
 	font-size: 14px !important;
 }
-.comment-section .comment-respond form :-moz-placeholder {
+.comment-section .comment-respond #car-select-form :-moz-placeholder {
 	font-size: 14px !important;
 }
-.comment-section .comment-respond form ::-moz-placeholder {
+.comment-section .comment-respond #car-select-form ::-moz-placeholder {
 	font-size: 14px !important;
 }
-.comment-section .comment-respond form :-ms-input-placeholder {
+.comment-section .comment-respond #car-select-form :-ms-input-placeholder {
 	font-size: 14px !important;
 }
-.comment-section .comment-respond form .submit {
+.comment-section .comment-respond #car-select-form .submit {
 	background-color: #c61334;
 	color: #fff;
 	border: none;
@@ -704,7 +702,7 @@ header.large .brand {
 	padding: 1px 20px;
 	transition: 0.2s;
 }
-.comment-section .comment-respond form .submit:hover {
+.comment-section .comment-respond #car-select-form .submit:hover {
 	background-color: #716d6e;
 }
 .blog-posts .sidebar .widget-title {
@@ -759,19 +757,23 @@ header.large .brand {
 .blog-posts .sidebar .widget:after {
 	clear: both;
 }
-.blog-posts .sidebar .search-widget form ::-webkit-input-placeholder {
+.blog-posts
+	.sidebar
+	.search-widget
+	#car-select-form
+	::-webkit-input-placeholder {
 	color: #c61334 !important;
 }
-.blog-posts .sidebar .search-widget form :-moz-placeholder {
+.blog-posts .sidebar .search-widget #car-select-form :-moz-placeholder {
 	color: #c61334 !important;
 }
-.blog-posts .sidebar .search-widget form ::-moz-placeholder {
+.blog-posts .sidebar .search-widget #car-select-form ::-moz-placeholder {
 	color: #c61334 !important;
 }
-.blog-posts .sidebar .search-widget form :-ms-input-placeholder {
+.blog-posts .sidebar .search-widget #car-select-form :-ms-input-placeholder {
 	color: #c61334 !important;
 }
-.blog-posts .sidebar .search-widget form .input-group input {
+.blog-posts .sidebar .search-widget #car-select-form .input-group input {
 	border-radius: 0;
 	color: #c61334;
 	font-size: 16px;
@@ -780,7 +782,7 @@ header.large .brand {
 	background: none;
 	-webkit-appearance: none;
 }
-.blog-posts .sidebar .search-widget form .input-group-addon {
+.blog-posts .sidebar .search-widget #car-select-form .input-group-addon {
 	border-radius: 0;
 	border: none;
 	background-color: #efe9e9;
@@ -792,16 +794,21 @@ header.large .brand {
 	padding-right: 0;
 	padding-left: 15px;
 }
-.blog-posts .sidebar .search-widget form .input-group-addon .glyphicon {
+.blog-posts
+	.sidebar
+	.search-widget
+	#car-select-form
+	.input-group-addon
+	.glyphicon {
 	font-size: 17px;
 	margin: 0 2px 0 -2px;
 }
-.blog-posts .sidebar .search-widget form .form-control {
+.blog-posts .sidebar .search-widget #car-select-form .form-control {
 	height: 43px;
 	border: 2px solid #efe9e9;
 	box-shadow: none;
 }
-.blog-posts .sidebar .search-widget form .input-group {
+.blog-posts .sidebar .search-widget #car-select-form .input-group {
 	width: 100%;
 }
 .blog-posts.error-page {
@@ -837,22 +844,22 @@ header.large .brand {
 	margin-top: 45px;
 	margin-right: -17px;
 }
-.blog-posts.error-page form {
+.blog-posts.error-page #car-select-form {
 	margin-top: 20px;
 }
-.blog-posts.error-page form ::-webkit-input-placeholder {
+.blog-posts.error-page #car-select-form ::-webkit-input-placeholder {
 	color: #c61334 !important;
 }
-.blog-posts.error-page form :-moz-placeholder {
+.blog-posts.error-page #car-select-form :-moz-placeholder {
 	color: #c61334 !important;
 }
-.blog-posts.error-page form ::-moz-placeholder {
+.blog-posts.error-page #car-select-form ::-moz-placeholder {
 	color: #c61334 !important;
 }
-.blog-posts.error-page form :-ms-input-placeholder {
+.blog-posts.error-page #car-select-form :-ms-input-placeholder {
 	color: #c61334 !important;
 }
-.blog-posts.error-page form .input-group input {
+.blog-posts.error-page #car-select-form .input-group input {
 	border-radius: 0;
 	color: #c61334;
 	font-size: 16px;
@@ -861,7 +868,7 @@ header.large .brand {
 	background: none;
 	-webkit-appearance: none;
 }
-.blog-posts.error-page form .input-group-addon {
+.blog-posts.error-page #car-select-form .input-group-addon {
 	border-radius: 0;
 	border: none;
 	background-color: #efe9e9;
@@ -873,16 +880,16 @@ header.large .brand {
 	padding-right: 0;
 	padding-left: 15px;
 }
-.blog-posts.error-page form .input-group-addon .glyphicon {
+.blog-posts.error-page #car-select-form .input-group-addon .glyphicon {
 	font-size: 17px;
 	margin: 0 2px 0 -2px;
 }
-.blog-posts.error-page form .form-control {
+.blog-posts.error-page #car-select-form .form-control {
 	height: 43px;
 	border: 2px solid #efe9e9;
 	box-shadow: none;
 }
-.blog-posts.error-page form .input-group {
+.blog-posts.error-page #car-select-form .input-group {
 	width: 100%;
 }
 /* Services
@@ -1026,16 +1033,16 @@ header.large .brand {
 #newsletter .social-icons ul li:hover {
 	opacity: 0.8;
 }
-#newsletter form ::-webkit-input-placeholder {
+#newsletter #car-select-form ::-webkit-input-placeholder {
 	font-size: 16px;
 }
-#newsletter form :-moz-placeholder {
+#newsletter #car-select-form :-moz-placeholder {
 	font-size: 16px;
 }
-#newsletter form ::-moz-placeholder {
+#newsletter #car-select-form ::-moz-placeholder {
 	font-size: 16px;
 }
-#newsletter form :-ms-input-placeholder {
+#newsletter #car-select-form :-ms-input-placeholder {
 	font-size: 16px;
 }
 /* Vehicles
@@ -1440,10 +1447,10 @@ header.large .brand {
 #contact .contact-info .highlight {
 	color: #c61334;
 }
-#contact form .form-group {
+#contact #car-select-form .form-group {
 	margin-bottom: 20px;
 }
-#contact form .text-field {
+#contact #car-select-form .text-field {
 	background-color: #dbdbdb;
 	height: 45px;
 	border-radius: 0;
@@ -1451,7 +1458,7 @@ header.large .brand {
 	box-shadow: none;
 	font-size: 18px;
 }
-#contact form textarea {
+#contact #car-select-form textarea {
 	background-color: #dbdbdb;
 	height: 196px;
 	border-radius: 0;
@@ -1459,37 +1466,37 @@ header.large .brand {
 	box-shadow: none;
 	font-size: 18px;
 }
-#contact form ::-webkit-input-placeholder {
+#contact #car-select-form ::-webkit-input-placeholder {
 	font-size: 18px !important;
 	font-weight: bold;
 }
-#contact form :-moz-placeholder {
+#contact #car-select-form :-moz-placeholder {
 	font-size: 18px !important;
 	font-weight: bold;
 }
-#contact form ::-moz-placeholder {
+#contact #car-select-form ::-moz-placeholder {
 	font-size: 18px !important;
 	font-weight: bold;
 }
-#contact form :-ms-input-placeholder {
+#contact #car-select-form :-ms-input-placeholder {
 	font-size: 18px !important;
 	font-weight: bold;
 }
-#contact form .first-name {
+#contact #car-select-form .first-name {
 	float: left;
 	width: 49%;
 }
-#contact form .last-name {
+#contact #car-select-form .last-name {
 	float: right;
 	width: 49%;
 }
-#contact form .btn-border {
+#contact #car-select-form .btn-border {
 	border: 1px solid #ffd992;
 	padding: 1px;
 	margin: 0 20px 0 0;
 	display: inline-block;
 }
-#contact form .submit-message {
+#contact #car-select-form .submit-message {
 	font-size: 24px;
 	font-weight: 900;
 	background-color: #c61334;
@@ -1502,7 +1509,7 @@ header.large .brand {
 	transition: 0.2s;
 	border-radius: 0;
 }
-#contact form .submit-message:hover {
+#contact #car-select-form .submit-message:hover {
 	background-color: #716d6e;
 }
 #contact .contact-box-title {
@@ -2279,4 +2286,8 @@ footer .footer-nav li a {
 }
 .react-datepicker-popper {
 	z-index: 3 !important;
+}
+
+.gap {
+	margin-top: 10px;
 }

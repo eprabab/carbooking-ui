@@ -1,5 +1,7 @@
+import appConfig from '../appConfig.json';
+
 function Fetcher(url: string) {
-	const newUrl = `https://api.ootyrentaltaxis.com${url}`;
+	const newUrl = `${appConfig.baseUrl}${url}`;
 
 	return fetch(newUrl, {
 		headers: {

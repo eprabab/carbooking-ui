@@ -15,7 +15,7 @@ interface Attraction {
 }
 
 export default function Attractions() {
-	const { data, error } = useSWR('/api/attractions', Fetcher);
+	const { data, error } = useSWR('/attractions', Fetcher);
 	const [showDetails, setShowDetails] = useState<{ [key: string]: string }>(
 		{}
 	);
